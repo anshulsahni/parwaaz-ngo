@@ -1,0 +1,316 @@
+@import 'colors'
+
+html
+  body
+    margin: 0
+    padding: 0
+    font-family: Arial, Helvetica, sans-serif
+    background-color: $body-bg-color
+
+    *
+      box-sizing: border-box
+
+    section
+      width: 100%
+
+      .section-header
+        background-color: $section-header-bg-color
+        display: inline-block
+        position: relative
+        color: $section-header-text-color
+        margin-top: 10px
+        z-index: 2
+
+        h1
+          padding-left: 10px
+
+        &:before
+          content: ''
+          height: 100%
+          width: 100%
+          position: absolute
+          transform: skew(30deg)
+          background-color: $section-header-bg-color
+          top: 0
+          left: 50%
+          z-index: -1
+
+      .section-body
+        background-color: $section-body-bg-color
+        padding: 45px 10px 10px 15%
+        margin-top: -30px
+        position: relative
+        height: 100%
+        color: $section-text-color
+
+        &.even-padding
+          padding-left: 5%
+          padding-right: 5%
+
+      /* introduction section */
+      &#intro
+        @extend %full-screen
+
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+
+
+        .left
+          float: left
+          text-align: right
+          background-color: $intro-dark-bg
+          color: $light-text-color
+          padding-right: 40px
+
+        .right
+          float: right
+          text-align: left
+          background-color: $intro-light-bg
+          color: $dark-text-color
+          padding-left: 40px
+
+
+        .left,
+        .right
+          width: 50%
+          height: 100%
+
+          .header-wrapper
+            @extend %text-align-center
+
+            vertical-align: middle
+            display: inline-block
+            font-size: 30px
+
+            h1
+              @extend %capitalize-text
+              margin-top: 20px
+              margin-bottom: 20px
+
+
+          &:before
+            content: ''
+            display: inline-block
+            height: 100%
+            vertical-align: middle
+
+      /* about us */
+      &#about_us
+        .question
+          p
+            font-size: 25px
+            display: inline-block
+          &:after
+            content: ' ?'
+            font-size: 25px
+
+        .answer
+          ul li
+            list-style-type: none
+            margin-left: -15px
+            font-size: 18px
+            line-height: 2.2
+
+            &::before
+              content: '\2713'
+              padding-right: 15px
+              font-size: 1.1em
+
+      /* events */
+      &.events
+        .event-header h2
+
+        .event-gallery
+          height: 400px
+
+
+          .slider
+            height: 100%
+            position: relative
+            width: 95%
+
+            .images
+              position: absolute
+              height: 100%
+              width: 100%
+              transition: all 500ms
+              opacity: 0
+
+              &.active
+                opacity: 1
+
+              img
+                height: 100%
+                width: 100%
+
+            .prev
+              content: '\276E'
+              left: -20px
+              &:hover
+                transform: translateX(-5px)
+
+            .next
+              content: '\276F'
+              right: -20px
+              &:hover
+                transform: translate(5px)
+
+
+            .prev,
+            .next
+              position: absolute
+              top: calc(50% - 20px)
+              bottom: calc(50% - 20px)
+              background-color: $navigation-bg-color
+              color: $navigation-arrow-color
+              width: 40px
+              font-size: 35px
+              line-height: 1.1
+              cursor: pointer
+              z-index: 4
+              transition: all 500ms
+              @extend %text-align-center
+
+      &#event_2
+        .section-body
+          padding-bottom: 40px
+
+      /* contact us */
+      &#contact_us
+
+        h3
+          font-size: 28px
+          margin-bottom: 15px
+
+          &:after
+            content: ''
+            width: 20px
+            height: 3px
+
+
+        .contact-element
+          font-size: 18px
+          margin: 15px 0
+          padding-left: 15px
+
+.row
+  display: flex
+
+  &.vertical-center
+    align-items: center
+
+  .column
+    flex: 1 1
+
+  .separator
+    width: 4px
+    background-color: $separator-color
+    height: 200px
+    margin: 0 10px
+
+.form
+  width: 95%
+  .form-field
+    margin-top: 25px
+    label
+      font-weight: 600
+      font-size: 14px
+      display: block
+      margin-bottom: 5px
+    input
+      width: 100%
+      height: 45px
+      color: $dark-text-color
+      font-size: 20px
+      padding-left: 5px
+      &:focus
+        outline: none
+        border: 2px solid $dark-text-color
+
+  .form-submit
+    margin-top: 25px
+    @extend %clearfix
+    button
+      float: right
+      height: 45px
+      background-color: $dark-bg-color
+      color: $light-text-color
+      font-size: 22px
+      outline: none
+      padding: 10px 25px
+      box-shadow: none
+      border: 0
+      cursor: pointer
+      &:focus
+        outline: none
+      &:hover
+        background-color: $light-text-color
+        color: $dark-bg-color
+
+
+
+
+.clearfix
+  @extend %clearfix
+
+
+.mail-id
+  a
+    @extend %is-link
+    @extend %is-dark-link
+
+    &:before
+      content: '\2709'
+      @extend %prepend-icon
+
+.phone-no
+  a
+    @extend %is-link
+    @extend %is-dark-link
+
+    &:before
+      content: '\260E'
+      @extend %prepend-icon
+
+.text-center
+  @extend %text-align-center
+
+.separator
+  @extend %separator
+
+%clearfix
+  &:after
+    content: ''
+    clear: both
+    display: table
+
+%is-link
+  text-decoration: none
+  cursor: pointer
+
+%is-dark-link
+  color: $link-dark-color
+  &:hover
+    color:
+
+%separator
+  height: 50%
+  width: 8px
+
+%is-light-link
+  color: $link-light-color
+
+%prepend-icon
+  margin-right: 5px
+  font-size: inherit
+
+%full-screen
+  height: 100vh
+
+%text-align-center
+  text-align: center
+
+%capitalize-text
+  text-transform: capitalize

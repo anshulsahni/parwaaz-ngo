@@ -1,0 +1,131 @@
+doctype html
+html(lang='en')
+
+  head
+      link(rel='stylesheet', href='./index.css')
+
+  body
+    section#intro
+        .left
+          .header-wrapper
+            h1 when
+            h1 dreams
+            h1 fly
+            h1 higher
+
+        .right
+          .header-wrapper
+            h1 smiles
+            h1 go
+            h1 wider
+
+        .clearfix
+
+    section#about_us
+      .section-header
+        h1 About Us
+      .section-body
+        .question
+          p What we believe in
+        .answer
+          ul.points
+            li A clear intent
+            li Unbiased Approach
+            li Quality Assurance
+            li Addressing a bigger cause
+
+        .question
+          p How we do it
+        .answer
+          ul.points
+            li Elevating the employability
+            li Education for children
+            li Improving health and hygiene
+            li Imparting basic life skills
+
+        .question
+          p Why should you be part of it
+        .answer
+          ul.points
+            li Because helping others feels good
+            li Because you will change someone's life
+            li And Because, We can't do it alone..
+
+    section.events#event_1
+      .section-header
+        h1 Event One
+      .section-body
+        .event-gallery
+          .slider
+            .prev &#10094;
+            .images._1.active
+              img(src="./assets/images/events/event_1/img_1.jpg")
+            .images._2
+              img(src="./assets/images/events/event_1/img_2.jpg")
+            .clearfix
+            .next &#10095;
+        .event-description
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet venenatis urna cursus eget nunc scelerisque viverra. Egestas purus viverra accumsan in. Platea dictumst quisque sagittis purus sit. Et tortor at risus viverra adipiscing at in tellus. Fames ac turpis egestas sed tempus. Massa tempor nec feugiat nisl pretium fusce id velit ut. Dignissim convallis aenean et tortor at risus viverra adipiscing. Dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu. Nunc faucibus a pellentesque sit amet porttitor.
+
+    section.events#event_2
+      .section-header
+        h1 Event Two
+      .section-body.even-padding
+        .row.vertical-center
+          .event-gallery.column
+            .slider
+              span.prev &#10094;
+              .images._1.active
+                img(src="./assets/images/events/event_2/img_1.jpg")
+              .images._2
+                img(src="./assets/images/events/event_2/img_2.jpg")
+              .clearfix
+              span.next &#10095;
+
+          .separator
+
+          .event-description.column
+            p.text-center Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugit dolor autem repellat, perspiciatis officia illo reiciendis totam eligendi iste adipisci qui ut veniam atque earum voluptatem omnis nihil illum!
+
+    section#contact_us
+      .section-header
+        h1 Contact Us
+      .section-body.even-padding
+        .row.vertical-center
+          .column
+            h3 Talk to us on,
+            .contact-element.row.vertical-center
+              .column
+                h4 Email:
+              .column
+                span.mail-id
+                  a(href='mailto:something@something.com') something@something.com
+            .contact-element.row.vertical-center
+              .column
+                h4 Phone:
+              .column
+                span.phone-no
+                  a(href="tel:1234567890") 1234567890
+
+          .separator
+
+          .reply-back-form.column
+            h3 Ping us And we'll contact you,
+
+            form.form
+              .form-field
+                label Full Name
+                input(type="text")
+              .form-field
+                label Email
+                input(type="email")
+              .form-field
+                label Phone Number
+                input(type="text")
+              .form-submit
+                button(type="button") Send
+
+
+  block scripts
+    script(src='assets/scripts/slider.js')
+

@@ -1,0 +1,6 @@
+# libraries
+node_modules/
+
+# build files
+public/*.css
+public/*.html

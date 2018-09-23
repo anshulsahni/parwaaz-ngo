@@ -1,0 +1,7 @@
+{
+  "verbose": true,
+  "execpMap": {
+    "sass": "npm run generate:styles",
+    "pug": "npm run generate:html"
+  }
+}

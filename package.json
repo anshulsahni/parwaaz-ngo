@@ -1,0 +1,23 @@
+{
+  "name": "parwaaz",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generate:html": "pug src/routes --out public -w src/**/*.pug",
+    "generate:styles": "node-sass src/styles -o public/ -w src/styles/*.sass",
+    "build": "npm run generate:styles || npm run generate:html",
+    "start": "npm run build && nodemon --config nodemon.json && livereload public -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "livereload": "^0.7.0",
+    "node-sass": "^4.9.3",
+    "nodemon": "^1.18.4",
+    "pug": "^2.0.3",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
