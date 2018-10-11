@@ -56,7 +56,7 @@ html
 
       .section-body
         background-color: $section-body-bg-color
-        padding: 45px 10px 10px 15%
+        padding: 45px 25px 10px 15%
         margin-top: -30px
         position: relative
         height: 100%
@@ -299,11 +299,17 @@ html
 .separator
   @extend %separator
 
+.strong
+  @extend %strong
+
 %clearfix
   &:after
     content: ''
     clear: both
     display: table
+
+%strong
+  font-weight: 600
 
 %is-link
   text-decoration: none
@@ -333,3 +339,6 @@ html
 
 %capitalize-text
   text-transform: capitalize
+
+%small-font
+  font-size: 14px
