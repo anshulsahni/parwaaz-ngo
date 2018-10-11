@@ -137,6 +137,38 @@ html
               padding-right: 15px
               font-size: 1.1em
 
+      /* what we do */
+      &#what_we_do
+        .activities
+          margin: 50px 0
+
+          .activity
+            position: relative
+            cursor: default
+
+            &:hover
+              .header
+                top: 0
+                font-size: 16px
+              .description
+                opacity: 1
+
+            .header
+              position: absolute
+              top: calc(50% - 5px)
+              font-size: 18px
+              width: 100%
+              transition: top 400ms ease-in-out, font-size 400ms ease-in-out
+              @extend %text-align-center
+              @extend %strong
+
+            .description
+              opacity: 0
+              margin-top: 30px
+              transition: opacity 600ms ease-in-out
+              @extend %text-align-center
+              @extend %small-font
+
       /* events */
       &.events
         .event-header h2
@@ -216,9 +248,10 @@ html
 
 .row
   display: flex
-
+  position: relative
   &.vertical-center
     align-items: center
+
 
   .column
     flex: 1 1
