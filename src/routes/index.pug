@@ -7,8 +7,8 @@ html(lang='en')
   body
     nav
       a(href="#about_us") About Us
-      a(href="#event_1") Event One
-      a(href="#event_2") Event Two
+      a(href="#event_1") Taste For Change
+      a(href="#what_we_do") What we Do
       a(href="#contact_us") Contact Us
 
     section#intro
@@ -77,7 +77,7 @@ html(lang='en')
             p.description
               | To ensure that the slum individuals feel confident and aware in the outside world, we guide them on basic skills like banking, laws, helplines, govt policies etc. We believe these skills, will not just evolve them into more informed citizens, but also help them compete with the real world.
 
-    section.events#event_2
+    section.events#event_1
       .section-header
         h1 Taste for Change
       .section-body.even-padding
@@ -111,31 +111,40 @@ html(lang='en')
                 h4 Email:
               .column
                 span.mail-id
-                  a(href='mailto:something@something.com') something@something.com
+                  a(href='mailto:parwaaz.2018@gmail.com')  parwaaz.2018@gmail.com
             .contact-element.row.vertical-center
               .column
                 h4 Phone:
               .column
                 span.phone-no
-                  a(href="tel:1234567890") 1234567890
+                  a(href="tel:9011069161") +91 9011069161
+            h3 Follow us on,
+            .contact-element.row
+              .social-icon
+                a(href="https://www.facebook.com/parwaaz2018/" target="_blank")
+                  img(src="./assets/images/icons/facebook.png")
+              .social-icon
+                a(href="https://www.linkedin.com/company/parwaaz/" target="_blank")
+                  img(src="./assets/images/icons/linkedin.png")
 
           .separator
 
           .reply-back-form.column
-            h3 Ping us And we'll contact you,
+            iframe(src="https://form.jotform.me/82964640088466")
+            //- h3 Ping us And we'll contact you,
 
-            form.form
-              .form-field
-                label Full Name
-                input(type="text")
-              .form-field
-                label Email
-                input(type="email")
-              .form-field
-                label Phone Number
-                input(type="text")
-              .form-submit
-                button(type="button") Send
+            //- form.form
+            //-   .form-field
+            //-     label Full Name
+            //-     input(type="text")
+            //-   .form-field
+            //-     label Email
+            //-     input(type="email")
+            //-   .form-field
+            //-     label Phone Number
+            //-     input(type="text")
+            //-   .form-submit
+            //-     button(type="button") Send
 
 
   block scripts
