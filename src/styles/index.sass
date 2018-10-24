@@ -13,21 +13,32 @@ html
     nav
       position: absolute
       top: 0
-      right: 0
       margin-top: 20px
-      a
-        @extend %is-link
+
+      .logo
+        height: 75px
+        float: left
+        margin-left: 20px
+        margin-right: 5px
+        img
+          height: 100%
+          width: auto
+      .nav-link
+        display: inline-block
+        margin-top: 35px
         margin-right: 25px
         font-size: 18px
-        color: $inactive-color
-        transition: color 400ms
-        padding-bottom: 15px
-        border-bottom: 3px solid transparent
-        transition: all 500ms
+        a
+          @extend %is-link
+          color: $inactive-color
+          transition: color 400ms
+          padding-bottom: 15px
+          border-bottom: 3px solid transparent
+          transition: all 500ms
 
-        &:hover
-          color: $dark-bg-color
-          border-bottom-color: $dark-text-color
+          &:hover
+            color: $dark-bg-color
+            border-bottom-color: $dark-text-color
 
     section
       width: 100%
@@ -87,15 +98,15 @@ html
         .left
           float: left
           text-align: right
-          background-color: $intro-dark-bg
-          color: $light-text-color
+          background-color: $intro-light-bg
+          color: $dark-text-color
           padding-right: 40px
 
         .right
           float: right
           text-align: left
-          background-color: $intro-light-bg
-          color: $dark-text-color
+          background-color: $intro-dark-bg
+          color: $light-text-color
           padding-left: 40px
 
 
