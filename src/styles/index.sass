@@ -24,11 +24,11 @@ html
         img
           height: 100%
           width: auto
+
       .nav-link
         display: inline-block
         margin-top: 35px
         margin-right: 25px
-        font-size: 18px
         a
           @extend %is-link
           color: $inactive-color
@@ -36,6 +36,8 @@ html
           padding-bottom: 15px
           border-bottom: 3px solid transparent
           transition: all 500ms
+        @media ($small-device)
+          display: none
 
           &:hover
             color: $dark-bg-color
@@ -118,6 +120,7 @@ html
           @media ($desktop-device)
             width: 50%
             height: 100%
+            font-size: 30px
           @media ($small-device)
             width: 100%
             height: 50%
@@ -128,7 +131,6 @@ html
           .header-wrapper
             vertical-align: middle
             display: inline-block
-            font-size: 30px
             text-align: center
 
             h1
