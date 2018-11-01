@@ -31,13 +31,14 @@ html
         margin-right: 25px
         a
           @extend %is-link
+          @extend %strong
           color: $inactive-color
           transition: color 400ms
           padding-bottom: 15px
           border-bottom: 3px solid transparent
           transition: all 500ms
           &:hover
-            color: $dark-bg-color
+            color: $dark-text-color
             border-bottom-color: $dark-text-color
 
         @media ($small-device)
